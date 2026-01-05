@@ -8,7 +8,7 @@ Anggota
 4.	Sayid Rama Aheta
 5.	Fauzan Azhima Zakaria
 
-Resident Hub - Smart Analytics Module adalah mini aplikasi berbasis CLI yang berfungsi untuk menganalisis data tagihan (billing resident) melalui menu interaktif. Mini aplikasi ini dirancang dengan sederhana dan mudah digunakan sehingga focus pada logika pemograman dan pengolahan data.
+Resident Hub – Smart Analytics Module merupakan mini aplikasi berbasis Command Line Interface (CLI) yang dirancang untuk menganalisis data tagihan resident. Aplikasi ini berfokus pada penerapan konsep dasar algoritma pemrograman seperti penggunaan array/list, fungsi, perulangan, dan pengolahan data numerik. Sistem dirancang sederhana agar memudahkan pemahaman alur logika program.
 Fitur pada Aplikasi
 1.	Tampilkan Data Billing
 Menampilkan semua data tagihan resident yang sudah tersimpan sebelumnya, sehingga admin/user dapat melihat billing secara lengkap yaitu:
@@ -71,4 +71,7 @@ Output :
 
 
 
+**Note**
+
+Aplikasi ini belum dilengkapi dengan validasi input lanjutan dan masih menggunakan data statis. Pengembangan selanjutnya dapat mencakup penambahan validasi input pengguna, penerapan penyimpanan data secara dinamis, serta visualisasi hasil analisis. Selain itu, aplikasi ini berpotensi dikembangkan menjadi sistem manajemen resident berbasis web atau mobile dengan analisis data yang lebih kompleks.
 
