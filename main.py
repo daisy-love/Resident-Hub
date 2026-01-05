@@ -29,11 +29,21 @@ while True:
 
     elif pilihan == "2":
         rid = input("Masukkan Resident ID: ")
-        print("Total Tagihan: Rp", total_tagihan(rid))
+        total = total_tagihan(rid)
+
+        if total == 0:
+            print("Resident ID tidak ditemukan.")
+        else:
+            print("Total Tagihan: Rp", total)
 
     elif pilihan == "3":
         rid = input("Masukkan Resident ID: ")
-        print("Rata-rata Tagihan: Rp", rata_rata_tagihan(rid))
+        rata = rata_rata_tagihan(rid)
+
+        if rata == 0:
+            print("Resident ID tidak ditemukan.")
+        else:
+            print("Rata-rata Tagihan: Rp", rata)
 
     elif pilihan == "4":
         hasil = urutkan_tagihan_desc()
@@ -45,7 +55,7 @@ while True:
         rid = input("Masukkan Resident ID: ")
         prediksi = prediksi_bulan_depan(rid)
         if prediksi == 0:
-            print("Data tidak cukup untuk prediksi.")
+            print("Data tidak ada untuk prediksi.")
         else:
             print("Estimasi tagihan bulan depan: Rp", int(prediksi))
 

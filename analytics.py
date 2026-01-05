@@ -3,12 +3,32 @@
 
 from data import billings
 
+URUTAN_BULAN = {
+    "Jan": 1,
+    "Feb": 2,
+    "Mar": 3,
+    "Apr": 4,
+    "Mei": 5,
+    "Jun": 6,
+    "Jul": 7,
+    "Agu": 8,
+    "Sep": 9,
+    "Okt": 10,
+    "Nov": 11,
+    "Des": 12
+}
+def histori_urut_bulan(resident_id):
+   
+    data = [b for b in billings if b.resident_id == resident_id]
+
+    data.sort(key=lambda x: URUTAN_BULAN[x.bulan])
+
+    return data
 
 def tampilkan_data():
     print("\nDATA BILLING RESIDENT")
     for b in billings:
         print(f"{b.resident_id} | {b.bulan} | Rp {b.jumlah}")
-
 
 def total_tagihan(resident_id):
     total = 0
@@ -33,7 +53,7 @@ def rata_rata_tagihan(resident_id):
 
 
 def urutkan_tagihan_desc():
-    # Bubble Sort (mudah dijelaskan di laporan)
+    
     data = billings.copy()
     n = len(data)
 
@@ -46,13 +66,11 @@ def urutkan_tagihan_desc():
 
 
 def prediksi_bulan_depan(resident_id):
-    histori = []
-
-    for b in billings:
-        if b.resident_id == resident_id:
-            histori.append(b.jumlah)
+    histori = histori_urut_bulan(resident_id)
 
     if len(histori) < 3:
         return 0
 
-    return sum(histori[-3:]) / 3
+    tiga_bulan_terakhir = histori[-3:]
+
+    return sum(b.jumlah for b in tiga_bulan_terakhir) / 3
